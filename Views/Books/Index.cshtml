@@ -1,0 +1,33 @@
+@model IEnumerable<Sit727MvcApp.Models.Book>
+
+@{
+    ViewData["Title"] = "Book List";
+}
+
+<section class="hero">
+    <p class="eyebrow">SIT727 Task 2.3D</p>
+    <h1>SIT727 MVC Demo</h1>
+    <p class="intro">This page is rendered with ASP.NET Core MVC and data loaded from SQLite.</p>
+</section>
+
+<section class="card">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Id</td>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</section>

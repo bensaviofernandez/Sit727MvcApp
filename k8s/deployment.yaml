@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sit727-mvc-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sit727-mvc-app
+  template:
+    metadata:
+      labels:
+        app: sit727-mvc-app
+    spec:
+      containers:
+        - name: sit727-mvc-app
+          image: sit727-mvc-app:v1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
