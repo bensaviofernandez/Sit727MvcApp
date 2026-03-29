@@ -68,20 +68,4 @@ Open the app through Kubernetes:
 http://localhost:30080
 ```
 
-## Screenshot Checklist
-
-Take screenshots of:
-
-1. `dotnet run` with the MVC app open in the browser
-2. `docker build -t sit727-mvc-app:v1 .` completing successfully
-3. The app running from `docker run` at `http://localhost:8080`
-4. `kubectl apply -f k8s/deployment.yaml`
-5. `kubectl apply -f k8s/service.yaml`
-6. `kubectl get all`
-7. `kubectl logs deployment/sit727-mvc-app`
-8. The app running from Kubernetes at `http://localhost:30080`
-
-## Notes
-
-- Use your own screenshots and command outputs in the final submission.
 - If a port is already in use, stop the existing process or container before retrying.
